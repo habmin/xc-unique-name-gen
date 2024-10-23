@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./src/script.js"></script>
     <title>Xenoblade Chronicles Unique Monster Name Generator</title>
+    <link rel="stylesheet" href="./css/font-faces.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="name-box">
-        <p id="epithet" class="unique-name-text"></p>
-        <p id="name" class="unique-name-text"></p>
+    <div class="title-box">
+        <img src="img/decorator.svg" alt="decorator" class="decorator left">
+        <div class="name-box">
+            <p id="epithet" class="unique-name-text"></p>
+            <p id="name" class="unique-name-text"></p>
+        </div>
+        <img src="img/decorator.svg" alt="decorator" class="decorator right">
     </div>
     <button onclick="onButtonClick()">Generate Name</button>
 </body>

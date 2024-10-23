@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Italic.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Light.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Medium.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Regular.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Semibold.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Thin.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Black.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Extrabold.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Extrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-BoldItalic.woff2') format('woff2'),
+        url('../fonts/BogueSlab-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Bold.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

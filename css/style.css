@@ -1,8 +1,37 @@
+@font-face {
+    font-family: 'BogueSlab';
+    src: url('../fonts/BogueSlab-Medium.woff2') format('woff2'),
+        url('../fonts/BogueSlab-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+.title-box {
+    height: 7rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.decorator {
+    height: 100%;
+}
+
+.decorator.right {
+    transform: scaleX(-1);
+    margin-left: -26px;
+}
+
 .name-box {
-    height: 3rem;
+    position: relative;
+    left: -13px;
+    height: 3.5rem;
+    width: 100%;
+    max-width: 700px;
     background-image: -webkit-linear-gradient(90deg, #511a1a, #a65353);
     border: 1px solid #000;
-    border-radius: 1.5rem;
+    border-radius: 1.8rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -10,8 +39,9 @@
 }
 
 .unique-name-text {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-family: 'BogueSlab', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
     color: #fff;
     margin: 0 0.2rem 0 0.2rem;
     padding: 0;

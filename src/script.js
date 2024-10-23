@@ -1,6 +1,6 @@
 let monsters = {};
 
-fetch('monsters.json')
+fetch('../data/monsters.json')
   .then(response => response.json())
   .then(data => {
     monsters = data;
@@ -9,8 +9,8 @@ fetch('monsters.json')
 
 function randomMonsterName(jsonMonsters) {
     return {
-        "epithet": jsonMonsters.epithets[Math.floor(Math.random() * jsonMonsters.epithets.length)], 
-        "name": jsonMonsters.names[Math.floor(Math.random() * jsonMonsters.names.length)]};
+        "epithet": jsonMonsters.epithets[Math.floor(Math.random() * jsonMonsters.epithets.length)][0], 
+        "name": jsonMonsters.names[Math.floor(Math.random() * jsonMonsters.names.length)][0]};
 }
 
 function onButtonClick() {

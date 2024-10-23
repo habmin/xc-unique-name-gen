@@ -1,4 +1,3 @@
-const fs = require('fs');
 
 const xc1 = `Abnormal Clone Barg 	77 	Barg 	Prison Island 	First Sanctum 	After Mechonis Core (Chapter 17)
 Active Impulso 	72 	Selua 	Bionis' Interior 	Middle part of the Second Lung 	After Mechonis Core (Chapter 17)
@@ -238,7 +237,7 @@ Praetorian Medea 	66 	Indoline Loyalist 	World Tree 	7th Perimeter Skyport 	Anyt
 Rapturous Scandia 	48 	Taos 	Leftherian Archipelago 	Godsford Isle 	Anytime
 Ravenwing Skull 	62 	Ageshu 	Temperantia 	Xataris Spring 	Anytime
 Reeking Douglas 	104 	Skwaror 	Gormott Province 	Brigands' Hideout 	After entering the First Low Orbit Station
-Relentless Arduran ※ 	99 	Ardun 	Gormott Province 	Kloom Farm 	After raising Pekka's Ardun
+Relentless Arduran 	99 	Ardun 	Gormott Province 	Kloom Farm 	After raising Pekka's Ardun
 Remorseful Vaclav 	14 	Ardainian Soldier 	Gormott Province 	Solitary Block #1 	Anytime
 Runaway Train Bool 	55 	Garlus (Driver) 	Temperantia 	Ardainian Garrison 	Anytime
 Sad Bernard 	12 	Feris 	Gormott Province 	Garanti Plain 	Anytime
@@ -432,7 +431,7 @@ Foghewn Augustus 	48 	Fogbeast Egel 	Black Mountains 	Travalga Bridge 	Anytime
 Fograptor D'nari 	37 	Fogbeast Vollgull 	Aurora Shelf 	Declessa Altar 	Anytime
 Fogstalker Naiara 	45 	Fogbeast Feris 	Vermilion Woods 	Rhogett Causeway 	After reaching the Black Mountains
 Fogtrawler Tallstuff 	55 	Fogbeast Garaffa 	Aurora Shelf 	Sullied Temple of Abitalia 	Anytime
-Gotthard, the Ethereal 	60 	Darbus 	Aurora Shelf 	Sullied Temple of Abitalia 	After reaching the Black Mountains
+Ethereal Gotthard 	60 	Darbus 	Aurora Shelf 	Sullied Temple of Abitalia 	After reaching the Black Mountains
 Hallowcanter Hazerune 	42 	Aries 	Black Mountains 	Belgazas' Drifts 	Anytime
 Hilltop Chegwin 	13 	Tirkin 	Aurora Shelf 	Zalmor's Falls 	Anytime
 Many-Lived Derrick 	42 	Taos 	The Ragmos Desolation 	Gelgemos Garrison 	Anytime
@@ -453,124 +452,4 @@ Treehugger Gerald 	14 	Ellook 	Aurora Shelf 	Waypoint Sapling 	Anytime
 Troglodyte Umir 	22 	Caterpile 	Yesterdale 	Tephra Hill 	Anytime
 Watchful Valencia 	10 	Rhogul 	Aurora Shelf 	Ragrinar Passage 	Anytime`
 
-function parseData(stringData) {
-    const lines = stringData.trim().split('\n');
-
-    const epithets = [];
-    const names = [];
-
-    lines.forEach(line => {
-        const columns = line.split(' \t');
-        const monster = columns[0];
-        const parts = monster.split(' ');
-        const name = parts.pop();
-        const epithet = parts.join(' ');
-        epithets.push(epithet);
-        names.push(name);
-    });
-
-    return { epithets: epithets, names: names };
-}
-
-const xc1Parsed = parseData(xc1);
-const xc2Parsed = parseData(xc2);
-const xc3Parsed = parseData(xc3);
-
-// Custom Additions
-const customEpithets = [
-    "Wide",
-    "Wretched",
-    "Mere",
-    "Insidious",
-    "Succinct",
-    "Squalid",
-    "Torpid",
-    "Grevous",
-    "Questionable",
-    "Dramatic",
-    "Dominant",
-    "Regal",
-    "Anxious",
-    "Possessive",
-    "Jittery",
-    "Sorrowful",
-    "Disturbed",
-    "Doomfist",
-    "Ghastly",
-    "Unforgiven",
-    "Deliquent",
-    "Volcanic",
-    "Serpentine",
-    "Rowdy",
-    "Emaciated",
-    "Forgotten",
-    "Bogbottomed",
-    "Spike-Spined",
-    "Barnacled",
-    "Ceaseless",
-    "Frostbounded",
-    "Hallowed",
-    "Jubilant",
-    "Obsidian-Eyed",
-    "Quaking",
-    "Radiant",
-    "Thunderous",
-    "Unyielding",
-    "Whispering",
-    "Zealous"
-];
-const customNames = [
-    "Maarvi",
-    "Horace",
-    "Balthazar",
-    "Babak",
-    "Zephyr",
-    "Zachariah",
-    "Rkard",
-    "Mortimer",
-    "Balbino",
-    "Gertruda",
-    "Gregor",
-    "Laurent",
-    "Morewater",
-    "Bonzales",
-    "Grider",
-    "Dustice",
-    "Rortugal",
-    "Truk",
-    "McDichael",
-    "Dourque",
-    "Dandleton",
-    "Furcotte",
-    "Nogilny",
-    "Archideld",
-    "Lopsworded",
-    "Chamgerlain",
-    "Jocelyn",
-    "Eggbert",
-    "Tryphena",
-    "Hortense",
-    "Vernon",
-    "Lanzo",
-    "Berthold",
-    "Wrathgar",
-    "Wraithclaw",
-    "Wendelin",
-    "Igor",
-    "Immacolata",
-    "Tharlic",
-    "Gorath",
-    "Mordain",
-    "Ulric",
-    "Perrimound",
-    "L'thorpe"
-];
-
-monsters = {
-    epithets: [...new Set([...xc1Parsed.epithets, ...xc2Parsed.epithets, ...xc3Parsed.epithets, ...customEpithets])],
-    names: [...new Set([...xc1Parsed.names, ...xc2Parsed.names, ...xc3Parsed.names, ...customNames])]
-}
-
-fs.writeFileSync('monsters.json', JSON.stringify(monsters, null, 2));
-
-console.log("Epithets: ", monsters.epithets.length, " Names: ", monsters.names.length);
+export { xc1, xc2, xc3 }
